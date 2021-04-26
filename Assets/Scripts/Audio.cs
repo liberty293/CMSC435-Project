@@ -5,17 +5,20 @@ using UnityEngine;
 public class Audio : MonoBehaviour
 {
     //Bpm of our song Happy Trancun is 123 bpm
-    public float bpm = 123;
-    public float secPerBeat;
-    public float positionInSeconds;
-    public float positionInBeats;
+    public Music song;
+    private float secPerBeat;
+    float positionInSeconds;
     public float timeStarted;
     public AudioSource music;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         music = GetComponent<AudioSource>();
-        secPerBeat = 60f / bpm;
+        music.clip = song.song;
+    }
+    void Start()
+    {
+        secPerBeat = 60f / song.bpm;
         timeStarted = (float)AudioSettings.dspTime;
         music.Play();
     }
@@ -24,7 +27,7 @@ public class Audio : MonoBehaviour
     void Update()
     {
         positionInSeconds = (float)(AudioSettings.dspTime - timeStarted);
-        positionInBeats = positionInSeconds / secPerBeat;
+        song.posInBeats = positionInSeconds / secPerBeat;
      }
 
 }
