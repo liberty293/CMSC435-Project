@@ -4,11 +4,48 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Music")]
 public class Music : ScriptableObject
 {
+    [SerializeField]
+    private AudioClip easySong, medSong, hardSong;
+//    [HideInInspector]
     public AudioClip song;
+    [SerializeField]
+    private int easybpm, medbpm, hardbpm;
+    [SerializeField]
+    private int easylife, medlife, hardlife;
+ //   [HideInInspector]
     public int bpm;
+    public int lifeDifficulty;
     public float posInBeats;
     public int beatsb4start = 4;
 
+    public void SetDificulty(string difficulty)
+    {
+        
+        switch (difficulty)
+        {
+            case "easy":
+                bpm = easybpm;
+                song = easySong;
+                lifeDifficulty = easylife;
+                break;
+            case "medium":
+                bpm = medbpm;
+                song = medSong;
+                lifeDifficulty = medlife;
+                break;
+            case "hard":
+                bpm = hardbpm;
+                song = hardSong;
+                lifeDifficulty = hardlife;
+                break;
+            default:
+                bpm = easybpm;
+                song = easySong;
+                lifeDifficulty = easylife;
+                break;
+
+        }
+    }
     public void Lvl1Beats(List<float> Beats)
     {
         for (int i=beatsb4start;i<94 + beatsb4start; i++)

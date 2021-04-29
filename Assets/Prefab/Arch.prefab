@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 85155562126401467}
   - component: {fileID: 8655555699865741714}
   - component: {fileID: 3217136419681314839}
+  - component: {fileID: 3059431688187885656}
   m_Layer: 0
   m_Name: Arch
   m_TagString: Untagged
@@ -330,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5bf007ece9bac42a2df8dbb519a408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BearTag: Finish
 --- !u!65 &8655555699865741714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -341,8 +343,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.7852592, y: 5.824234, z: 0.9573779}
-  m_Center: {x: 0.0724481, y: 2.412117, z: 1.5531652}
+  m_Size: {x: 6.7852592, y: 5.824234, z: 1.68}
+  m_Center: {x: 0.0724481, y: 2.412117, z: 0}
 --- !u!54 &3217136419681314839
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -359,6 +361,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3059431688187885656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5780093067525935933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae636ee8df8bff24d8d8ae69caa2c73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BearTag: Finish
+  controls: {fileID: 11400000, guid: 2d50b5de0f5ee1a41a215eac814ae153, type: 2}
 --- !u!1 &7246733765469739008
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +401,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7246733765469739008}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: -2}
   m_LocalScale: {x: 0.63978773, y: 0.9698731, z: 5.0658317}
   m_Children:
   - {fileID: 1368497737599966304}

@@ -22,5 +22,6 @@ public class FuzzyControl : MonoBehaviour
         }
         
         if (Input.GetKeyDown(controls.Roll)) AnimControl.Play("Roll");
+        if (Input.GetKeyDown(controls.Shoot)) AnimControl.Play("Bird",1);
     }
 }

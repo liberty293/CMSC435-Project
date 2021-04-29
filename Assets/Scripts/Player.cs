@@ -20,7 +20,13 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        currentHealth = currentHealth - damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public void NewLife()
+    {
+        currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth);
     }
 }

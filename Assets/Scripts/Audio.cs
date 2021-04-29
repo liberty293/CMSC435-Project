@@ -16,8 +16,8 @@ public class Audio : MonoBehaviour
         music = GetComponent<AudioSource>();
         music.clip = song.song;
     }
-    void Start()
-    {
+    void OnEnable()
+    { 
         secPerBeat = 60f / song.bpm;
         timeStarted = (float)AudioSettings.dspTime;
         music.Play();

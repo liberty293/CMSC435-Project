@@ -12,7 +12,7 @@ public class puddle : SyncAnimation
     {
         if (other.CompareTag(BearTag) && !pointsAwarded)
         {
-            if (other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+            if (other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Jump") && other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime<.5)
             {
                 Debug.Log("Award Points");
                 pointsAwarded = true;

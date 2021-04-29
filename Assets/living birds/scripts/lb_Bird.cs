@@ -21,7 +21,7 @@ public class lb_Bird : MonoBehaviour {
 	public bool fleeCrows = true;
 
 	Animator anim;
-	lb_BirdController controller;
+	public lb_BirdController controller;
 
 	bool paused = false;
 	bool idle = true;
