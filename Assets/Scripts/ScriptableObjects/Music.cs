@@ -18,6 +18,7 @@ public class Music : ScriptableObject
     public float posInBeats;
     public int beatsb4start = 4;
 
+
     public void SetDificulty(string difficulty)
     {
         
