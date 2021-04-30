@@ -29,7 +29,7 @@ public class Dificulty : MonoBehaviour
         if (!songs.GetComponent<AudioSource>().isPlaying)
         {
             level++;
-            if (level <= 2)
+            if (level <= 3)
             {
                 StartCoroutine(updateLevel(level));
             }
