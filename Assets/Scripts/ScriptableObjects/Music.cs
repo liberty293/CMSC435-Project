@@ -17,7 +17,7 @@ public class Music : ScriptableObject
     public int lifeDifficulty;
     public float posInBeats;
     public int beatsb4start = 4;
-
+    public string Hardness { get; set; }
 
     public void SetDificulty(string difficulty)
     {
@@ -46,6 +46,7 @@ public class Music : ScriptableObject
                 break;
 
         }
+
     }
     public void Lvl1Beats(List<float> Beats)
     {
