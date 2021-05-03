@@ -5,4 +5,6 @@ using UnityEngine;
 public class Controls : ScriptableObject
 {
     public KeyCode Jump, Roll, Shoot;
+
+
 }
