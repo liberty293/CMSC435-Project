@@ -14,6 +14,7 @@ public class Dificulty : MonoBehaviour
     public Music SetLevel;
     public GameObject[] levelObstacles;
     bool done = false;
+    public RecordScore score;
     void Awake()
     {
         songs = GetComponent<Audio>();
@@ -52,6 +53,7 @@ public class Dificulty : MonoBehaviour
         Instantiate(endPrefab, transform.position, Quaternion.identity);
         LevelUI.text = "You Win!";
         LevelUI.enabled = true;
+        score.GetHighScore();
     }
 
     IEnumerator updateLevel(int level)

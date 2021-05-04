@@ -11,6 +11,7 @@ public class lb_Bird_copy : SyncAnimation {
 	Animator anim;
 
 
+
 	bool dead = false;
 
 
@@ -46,7 +47,8 @@ public class lb_Bird_copy : SyncAnimation {
 		{
 			if (other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(1).IsName("Bird") && other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(1).normalizedTime < .5)
 			{
-				Debug.Log("Award Points");
+				//Debug.Log("Award Points");
+				score.AddScore(points);
 				pointsAwarded = true;
 				KillBird();
 			}

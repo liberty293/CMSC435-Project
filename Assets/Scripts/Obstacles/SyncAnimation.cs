@@ -14,6 +14,9 @@ public class SyncAnimation : MonoBehaviour
     protected Vector3 initPosition, finPosition;
    protected Music song;
     protected SendBeats spawner;
+    protected int points;
+    protected RecordScore score;
+    float pos;
 
     // Update is called once per frame
     protected virtual void OnEnable() 
@@ -23,22 +26,40 @@ public class SyncAnimation : MonoBehaviour
         beatsAdvance = spawner.NumBeatsAdvance;
         mainCharacter = GameObject.FindGameObjectWithTag(BearTag).transform;
         initPosition = transform.position;
-        finPosition = mainCharacter.position;
+        finPosition = new Vector3(mainCharacter.GetChild(0).position.x, mainCharacter.GetChild(0).position.y, mainCharacter.GetChild(0).position.z-3.5f);
+        
     }
+    private void Start()
+    {
+        score = FindObjectOfType<RecordScore>();
+        switch (song.Hardness)
+        {
+            case "easy":
+                points = 10;
+                break;
+            case "medium":
+                points = 20;
+                break;
+            case "hard":
+                points = 30;
+                break;
 
+         }
+    }
     public void RecordBeat(float beat)
     {
         beatNumber = beat;
         
     }
 
-    protected virtual void FixedUpdate()
+    protected virtual void Update()
     {
+        pos = song.posInBeats;
 
-        var timing = (spawner.NumBeatsAdvance - (beatNumber - song.posInBeats))/ spawner.NumBeatsAdvance;
+        timing = (spawner.NumBeatsAdvance - (beatNumber - song.posInBeats))/ spawner.NumBeatsAdvance;
           transform.position = Vector3.LerpUnclamped(initPosition, finPosition, timing);
         if (timing >= 2) Destroy(gameObject);
- //       Debug.Log(gameObject.name + " : " +  "; " + spawner.NumBeatsAdvance + "; " + song.posInBeats + ";" + timing);
+
     }
 
 

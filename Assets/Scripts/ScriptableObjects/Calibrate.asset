@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c99e8d7de02f984cb4e5176ad2607ec, type: 3}
+  m_Name: Calibrate
+  m_EditorClassIdentifier: 
+  easySong: {fileID: 0}
+  medSong: {fileID: 0}
+  hardSong: {fileID: 0}
+  song: {fileID: 8300000, guid: 528bfa71f59d300489ea1e428aab78ac, type: 3}
+  easybpm: 0
+  medbpm: 0
+  hardbpm: 0
+  easylife: 0
+  medlife: 0
+  hardlife: 0
+  bpm: 90
+  lifeDifficulty: 0
+  posInBeats: 0
+  beatsb4start: 8

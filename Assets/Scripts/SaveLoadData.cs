@@ -27,5 +27,6 @@ public class SaveLoadData : MonoBehaviour
             JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString(keys), control);
         if (PlayerPrefs.HasKey("difficulty"))
             dificulty.Hardness = PlayerPrefs.GetString("difficulty");
+        else dificulty.Hardness = "easy";
     }
 }

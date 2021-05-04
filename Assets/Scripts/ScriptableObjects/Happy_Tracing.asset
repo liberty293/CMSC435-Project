@@ -17,12 +17,12 @@ MonoBehaviour:
   hardSong: {fileID: 8300000, guid: dce0e14633f73ee4dbcedbc8fc9d9269, type: 3}
   song: {fileID: 8300000, guid: dce0e14633f73ee4dbcedbc8fc9d9269, type: 3}
   easybpm: 90
-  medbpm: 100
+  medbpm: 103
   hardbpm: 123
   easylife: 10
   medlife: 5
   hardlife: 1
   bpm: 123
   lifeDifficulty: 10
-  posInBeats: 59.13602
+  posInBeats: 4.2421756
   beatsb4start: 4

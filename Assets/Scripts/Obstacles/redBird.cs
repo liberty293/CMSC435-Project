@@ -11,6 +11,7 @@ public class redBird : SyncAnimation {
 	Animator anim;
 
 
+
 	bool dead = false;
 
 
@@ -46,8 +47,8 @@ public class redBird : SyncAnimation {
 		{
 			if (other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(1).IsName("Bird") && other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(1).normalizedTime < .5)
 			{
-				Debug.Log("Award Points");
-				pointsAwarded = true;
+				score.AddScore(points);
+;				pointsAwarded = true;
 				other.GetComponentInChildren<Player>().NewLife();
 				KillBird();
 			}

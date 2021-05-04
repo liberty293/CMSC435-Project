@@ -8,9 +8,16 @@ public class FuzzyControl : MonoBehaviour
     private Controls controls;
     public Animator AnimControl;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if (PlayerPrefs.HasKey("calibration"))
+        {
+            var parent = transform.parent;
+            parent.DetachChildren();
+            parent.position = new Vector3(parent.position.x, parent.position.y, PlayerPrefs.GetFloat("calibration"));
+            transform.parent = parent;
+            Debug.Log("I collaborated");
+        }
     }
 
     // Update is called once per frame

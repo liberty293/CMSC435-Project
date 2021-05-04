@@ -5,7 +5,7 @@ using UnityEngine;
 public class fam : SyncAnimation
 {
     bool metfam = false;
-    protected override void FixedUpdate()
+    protected override void Update()
     {
         if (!metfam)
         {
