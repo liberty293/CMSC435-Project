@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class HealthBar : MonoBehaviour
 {
@@ -20,5 +22,9 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
         background.color = gradient.Evaluate(slider.normalizedValue);
+        if(health == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
