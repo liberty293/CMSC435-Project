@@ -283,7 +283,7 @@ MonoBehaviour:
   NumBeatsAdvance: 3
   obstacles:
   - {fileID: 0}
-  - {fileID: 5260630444286593919, guid: 8ee74913c482929418b12d7123646dff, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   lifebird: {fileID: 100092, guid: ac55a43f291f95449ab3dd332afa1056, type: 3}
   beats: []
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9f4241d8331b64e80e0be25d19a2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 1949377437}
+  Score: {fileID: 1949377437}
   HiScore: {fileID: 1075306677}
 --- !u!1 &304501436
 GameObject:

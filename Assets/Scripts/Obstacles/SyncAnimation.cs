@@ -26,7 +26,7 @@ public class SyncAnimation : MonoBehaviour
         beatsAdvance = spawner.NumBeatsAdvance;
         mainCharacter = GameObject.FindGameObjectWithTag(BearTag).transform;
         initPosition = transform.position;
-        finPosition = new Vector3(mainCharacter.GetChild(0).position.x, mainCharacter.GetChild(0).position.y, mainCharacter.GetChild(0).position.z-3.5f);
+        finPosition = mainCharacter.position;
         
     }
     private void Start()
