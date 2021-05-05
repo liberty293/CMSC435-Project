@@ -17,8 +17,12 @@ public class Music : ScriptableObject
     public int lifeDifficulty;
     public float posInBeats;
     public int beatsb4start = 4;
-    public string Hardness { get; set; }
-
+    [SerializeField]
+    public string Hardness  { get; set; }
+    void OnEnable()
+    {
+        Hardness = "easy";
+    }
     public void SetDificulty(string difficulty)
     {
         
@@ -48,9 +52,9 @@ public class Music : ScriptableObject
         }
 
     }
-    public void Lvl1Beats(List<float> Beats)
+    public virtual void Lvl1Beats(List<float> Beats)
     {
-        for (int i=beatsb4start;i<94 + beatsb4start; i++)
+        for (int i=beatsb4start;i<=94; i++)
         {
             Beats.Add(i);
             if (i < 32)

@@ -19,6 +19,7 @@ public class SendBeats : MonoBehaviour
         //can change for beat level;
         song = FindObjectOfType<Audio>().song;
         song.Lvl1Beats(beats);
+        
 
     }
     private void Start()
@@ -27,7 +28,7 @@ public class SendBeats : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (!Object.FindObjectOfType<Audio>().music.isPlaying || endgame) return;
         if((beatIndex < beats.Count) && (beats[beatIndex] <= song.posInBeats + NumBeatsAdvance))

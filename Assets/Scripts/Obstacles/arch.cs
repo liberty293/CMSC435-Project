@@ -14,7 +14,8 @@ public class arch : SyncAnimation
         {
             if (other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Roll") && other.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime<.5)
             {
-                Debug.Log("Award Points");
+               // Debug.Log("Award Points");
+                score.AddScore(points);
                 pointsAwarded = true;
             }
         }
