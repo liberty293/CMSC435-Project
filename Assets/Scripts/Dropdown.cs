@@ -60,10 +60,6 @@ public class Dropdown : MonoBehaviour
         }
         else if (val == 12)
         {
-            controls.Jump = KeyCode.S;
-        }
-        else if (val == 13)
-        {
             controls.Jump = KeyCode.J;
         }
     }
@@ -119,11 +115,7 @@ public class Dropdown : MonoBehaviour
         }
         else if (val == 12)
         {
-            controls.Roll = KeyCode.S;
-        }
-        else if (val == 13)
-        {
-            controls.Roll = KeyCode.J;
+            controls.Jump = KeyCode.J;
         }
     }
     public void ChangeDestroy(int val)
@@ -178,11 +170,7 @@ public class Dropdown : MonoBehaviour
         }
         else if (val == 12)
         {
-            controls.Shoot = KeyCode.S;
-        }
-        else if (val == 13)
-        {
-            controls.Shoot = KeyCode.J;
+            controls.Jump = KeyCode.J;
         }
     }
 }
