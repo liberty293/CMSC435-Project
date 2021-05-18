@@ -3,7 +3,22 @@ guid: 1775d58ef8aa201449c66c456a7e3f49
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cobblesArch
+    second: {fileID: 2100000, guid: 01024d7d0cde66f48bcf6191b872ad57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
+    second: {fileID: 2100000, guid: 95068d52db6e0f746a86b11fa0f9868b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: middleCobble
+    second: {fileID: 2100000, guid: d7b90bd0132789f46addfe0b1b70bbff, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
