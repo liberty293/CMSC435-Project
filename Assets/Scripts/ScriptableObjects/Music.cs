@@ -21,7 +21,7 @@ public class Music : ScriptableObject
     public string Hardness  { get; set; }
     void OnEnable()
     {
-        Hardness = "easy";
+//        Hardness = "easy";
     }
     public void SetDificulty(string difficulty)
     {
@@ -32,21 +32,25 @@ public class Music : ScriptableObject
                 bpm = easybpm;
                 song = easySong;
                 lifeDifficulty = easylife;
+                Hardness = "easy";
                 break;
             case "medium":
                 bpm = medbpm;
                 song = medSong;
                 lifeDifficulty = medlife;
+                Hardness = "medium";
                 break;
             case "hard":
                 bpm = hardbpm;
                 song = hardSong;
                 lifeDifficulty = hardlife;
+                Hardness = "hard";
                 break;
             default:
                 bpm = easybpm;
                 song = easySong;
                 lifeDifficulty = easylife;
+                Hardness = "easy";
                 break;
 
         }
