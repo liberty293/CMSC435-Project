@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class SyncAnimation : MonoBehaviour
